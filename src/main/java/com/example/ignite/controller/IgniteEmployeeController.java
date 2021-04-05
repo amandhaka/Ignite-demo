@@ -35,7 +35,7 @@ public class IgniteEmployeeController {
 
     @DeleteMapping("/deleteAll")
     public String deleteAllEmployee() {
-        igniteEmployeeService.deleteEmployeeFromCache().subscribeOn(Schedulers.parallel()).subscribe();
+        igniteEmployeeService.deleteEmployeeFromCache();
         return "Deleted";
     }
 }

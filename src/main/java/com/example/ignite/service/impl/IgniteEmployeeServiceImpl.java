@@ -31,10 +31,8 @@ public class IgniteEmployeeServiceImpl implements IgniteEmployeeService {
     }
 
     @Override
-    public Mono<Void> deleteEmployeeFromCache() {
-        return Mono.create(consumer-> {
-            repo.deleteAll();
-        });
+    public void deleteEmployeeFromCache() {
+         repo.deleteAll();
     }
 
     @Override

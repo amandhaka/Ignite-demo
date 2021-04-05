@@ -10,7 +10,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 
 @EnableIgniteRepositories(basePackages = "com.example.ignite.repository.ignite")
-@EnableJpaRepositories(excludeFilters = {@ComponentScan.Filter(type = FilterType.ANNOTATION, value = RepositoryConfig.class)})
+@EnableJpaRepositories(basePackages =  "com.example.ignite.repository.jpa")
 @SpringBootApplication
 public class IgniteApplication {
 

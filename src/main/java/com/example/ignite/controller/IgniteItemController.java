@@ -19,13 +19,21 @@ public class IgniteItemController {
 
     @PostMapping(value = "/bulk",consumes = { MediaType.APPLICATION_JSON_VALUE, MediaType.MULTIPART_FORM_DATA_VALUE })
     public String addItemToDatabase(@RequestParam("file") MultipartFile file) {
-        igniteItemService.saveBulkItemToCache(file).subscribeOn(Schedulers.parallel()).subscribe();
+        igniteItemService.saveBulkItemToCache(file)
+                .subscribeOn(Schedulers.parallel())
+                .log()
+                .subscribe();
         return "Uploading";
     }
 
     @GetMapping(value="/getItemList")
     public List<Item> viewItemList() {
         return igniteItemService.viewItemList();
+    }
+
+    @DeleteMapping("/deleteItem")
+    public String deleteAllItem(){
+        return igniteItemService.deleteAllItem();
     }
 
 }

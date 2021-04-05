@@ -27,7 +27,6 @@ import java.util.List;
 public class ApacheIgniteConfiguration {
     @Bean
     public Ignite igniteInstance(@Autowired IgniteConfiguration igniteConfiguration) {
-        igniteConfiguration.setAutoActivationEnabled(true);
         igniteConfiguration.setActiveOnStart(true);
         Ignite ignite = Ignition.getOrStart(igniteConfiguration);
         ignite.active(true);
@@ -39,7 +38,6 @@ public class ApacheIgniteConfiguration {
         IgniteConfiguration igniteConfiguration = new IgniteConfiguration();
         igniteConfiguration.setIgniteInstanceName("igniteTest");
         igniteConfiguration.setClientMode(false);
-        igniteConfiguration.setPeerClassLoadingEnabled(true);
         igniteConfiguration.setLocalHost("127.0.0.1");
 
         TcpDiscoverySpi tcpDiscoverySpi = new TcpDiscoverySpi();

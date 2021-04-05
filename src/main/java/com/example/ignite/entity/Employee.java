@@ -25,7 +25,5 @@ public class Employee implements Serializable {
     @QuerySqlField
     public String department;
 
-    @QuerySqlField
     public String test;
-
 }

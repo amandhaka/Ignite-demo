@@ -43,4 +43,10 @@ public class IgniteItemServiceImpl implements IgniteItemService {
         return itemList;
     }
 
+    @Override
+    public String deleteAllItem() {
+        repo.deleteAll();
+        return "Deleted Successfully";
+    }
+
 }

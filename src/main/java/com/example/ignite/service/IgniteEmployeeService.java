@@ -15,5 +15,5 @@ public interface IgniteEmployeeService {
 
     Employee viewEmployeeById(Long id);
 
-    Mono<Void> deleteEmployeeFromCache();
+     void deleteEmployeeFromCache();
 }
