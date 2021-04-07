@@ -19,7 +19,6 @@ public class Item implements Serializable {
     @QuerySqlField
     private String zoneCode;
 
-    @QuerySqlField
     private Long demand;
 
     @QuerySqlField

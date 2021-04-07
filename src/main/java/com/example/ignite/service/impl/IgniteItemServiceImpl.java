@@ -39,6 +39,7 @@ public class IgniteItemServiceImpl implements IgniteItemService {
     @Override
     public List<Item> viewItemList() {
         List<Item> itemList = new ArrayList<>();
+        System.out.println(repo.getAllItems());
         repo.findAll().forEach(e->itemList.add(e));
         return itemList;
     }

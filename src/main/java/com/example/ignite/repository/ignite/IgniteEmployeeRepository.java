@@ -9,6 +9,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-@RepositoryConfig(cacheName = "employee")
+@RepositoryConfig(cacheName = "employeeCache")
 public interface IgniteEmployeeRepository extends IgniteRepository<Employee, Long> {
 }

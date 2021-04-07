@@ -11,19 +11,22 @@ public class Employee implements Serializable {
     private static final long serialVersionUID = -2974414641088735500L;
 
     @QuerySqlField(index = true)
-    public Long id;
+    private Long id;
 
     @QuerySqlField
-    public String username;
+    private String username;
 
     @QuerySqlField
-    public String firstName;
+    private String firstName;
 
     @QuerySqlField
-    public String lastName;
+    private String lastName;
 
     @QuerySqlField
-    public String department;
+    private String department;
 
-    public String test;
+    private String test;
+
+    private String newColumn;
+
 }
